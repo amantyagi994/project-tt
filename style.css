@@ -170,10 +170,9 @@
 }
 
 .time-table-header .class-container .c-nav li ul .std {
-  height: 100%;
-  width: 100%;
   display: block;
-  padding: 10px 25px;
+  width: 6rem;
+  padding: 10px 2px;
 }
 
 .time-table-header .class-container .c-nav li ul .std:hover {
@@ -289,7 +288,7 @@
 
 .semester-container .sem-container li ul .semester {
   height: 100%;
-  width: 5rem;
+  width: 7rem;
   display: block;
   padding: 10px 0;
 }
