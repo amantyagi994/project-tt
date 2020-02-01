@@ -1,3 +1,12 @@
+:root {
+  --bg-primary: #fec7d7;
+  --bg-secondary: #d9d4e7;
+  --headline: #0e172c;
+  --paragraph: #a7a9be;
+  --button: #0e172c;
+  --btn-txt: #fffffe;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5,10 +14,16 @@
   padding: 0;
 }
 
+body {
+  margin: 0 4rem;
+  padding: 2px;
+  border: 5px solid var(--headline);
+}
+
 .welcome {
   height: 100vh;
   width: 100%;
-  background: #555;
+  background: var(--paragraph);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +70,22 @@
   font-weight: 700;
 }
 
+@media (max-width: 968px) {
+  .welcome {
+    width: 100%;
+  }
+  .welcome .logo-container {
+    height: 150px;
+    width: 150px;
+  }
+  .welcome .wlcm-txt-container h2 {
+    font-size: 1.25rem;
+  }
+  .welcome .wlcm-txt-container h3 {
+    font-size: 1rem;
+  }
+}
+
 .time-table-header {
   height: 3rem;
   width: 100%;
@@ -65,14 +96,45 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  background-color: #00ccff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--bg-secondary);
+}
+
+.time-table-header .input-bar {
+  margin: 1rem;
+  padding: 0.5rem 5rem 0.6rem 2rem;
+  width: 20rem;
+  border: 3px solid var(--headline);
+  border-radius: 2rem;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+}
+
+.time-table-header .btn {
+  margin: 1rem 0 0 0;
+  border: none;
+  border-radius: 0.5rem;
+  width: 10rem;
+  padding: 0.75rem 0.5rem 0.75rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  outline: none;
+  color: var(--btn-txt);
+  background: var(--button);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.time-table-header .btn:hover {
+  color: #ff5858;
 }
 
 .time-table-header .class-container {
-  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,7 +144,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
+  float: left;
+  margin: 0 1rem;
+  border: none;
 }
 
 .time-table-header .class-container .c-nav {
@@ -100,9 +164,13 @@
   position: relative;
   width: 10rem;
   display: block;
-  color: #000000;
+  color: var(--btn-txt);
   padding: 10px 25px;
-  background-color: white;
+  background-color: var(--button);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .time-table-header .class-container .c-nav li label:after {
@@ -113,7 +181,7 @@
   right: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  color: #000000;
+  color: var(--btn-txt);
   font-size: 18px;
   font-weight: 500;
 }
@@ -126,7 +194,7 @@
   content: "-";
   display: block;
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -159,14 +227,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #000000;
+  color: var(--btn-txt);
   padding: 10px 20px;
   opacity: 0;
   z-index: 55;
   pointer-events: none;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
-  background-color: #555;
+  background-color: var(--button);
+  border-radius: 0.5rem;
 }
 
 .time-table-header .class-container .c-nav li ul .std {
@@ -177,7 +246,6 @@
 
 .time-table-header .class-container .c-nav li ul .std:hover {
   color: #ff5858;
-  background-color: #555;
   cursor: pointer;
   opacity: 1;
   pointer-events: all;
@@ -189,7 +257,6 @@
 }
 
 .semester-container {
-  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,7 +266,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
+  margin: 0 1rem 0 0;
 }
 
 .semester-container .sem-container {
@@ -217,9 +284,13 @@
   position: relative;
   width: 10rem;
   display: block;
-  color: #000000;
+  color: var(--btn-txt);
   padding: 10px 25px;
-  background-color: white;
+  background-color: var(--button);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 .semester-container .sem-container li label:after {
@@ -230,7 +301,7 @@
   right: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  color: #000000;
+  color: var(--btn-txt);
   font-size: 18px;
   font-weight: 500;
 }
@@ -243,7 +314,7 @@
   content: "-";
   display: block;
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 15px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -276,14 +347,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #000000;
+  color: var(--btn-txt);
   padding: 10px 20px;
   opacity: 0;
   z-index: 55;
   pointer-events: none;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
-  background-color: #555;
+  background-color: var(--button);
+  border-radius: 0.5rem;
 }
 
 .semester-container .sem-container li ul .semester {
@@ -295,7 +367,6 @@
 
 .semester-container .sem-container li ul .semester:hover {
   color: #ff5858;
-  background-color: #555;
   cursor: pointer;
   opacity: 1;
   pointer-events: all;
@@ -306,9 +377,170 @@
   pointer-events: all;
 }
 
-.timetable-container {
+.screen-rotate-guide {
   height: 100vh;
   width: 100%;
   background-color: #000000;
+  color: var(--btn-txt);
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+}
+
+@media (max-width: 968px) {
+  .time-table-header {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .time-table-header .input-container {
+    margin: 0.5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .time-table-header .input-container .input-bar {
+    width: 12rem;
+    margin: 0;
+    padding: 0.3rem 0 0.3rem 1rem;
+  }
+  .time-table-header .input-container .btn {
+    width: 10rem;
+    padding: 0.35rem 1rem 0.35rem 1rem;
+  }
+  .time-table-header .dropdown-container {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .time-table-header .dropdown-container .class-container {
+    margin: 0.25rem 0;
+  }
+  .time-table-header .dropdown-container .semester-container {
+    margin: 0.25rem 0;
+  }
+  .timetable-container {
+    visibility: hidden;
+  }
+  .screen-rotate-guide {
+    position: relative;
+    visibility: visible;
+  }
+}
+
+.timetable-container {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  padding-top: 3rem;
+}
+
+.timetable-container .days-container {
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  background-color: #0940aa;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1;
+      grid-template-rows: 1;
+}
+
+.timetable-container .days-container .days {
+  position: relative;
+  margin: 0.25rem;
+  display: inline-block;
+  height: 3rem;
+  background-color: #ff22ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.timetable-container .schedule-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.timetable-container .schedule-container .time-indicator {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.timetable-container .schedule-container .time-indicator .time-period {
+  position: relative;
+  margin: 0.25rem;
+  display: inline-block;
+  height: 3rem;
+  background-color: #ff22ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */

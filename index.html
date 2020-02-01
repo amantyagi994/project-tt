@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>TimeTable</title>
   </head>
   <body>
@@ -19,37 +19,121 @@
     </section>
 
     <section class="time-table-header">
-      <div class="class-container">
-        <ul class="c-nav">
-          <li>
-            <label>Class</label>
-            <ul>
-              <li class="std" id="class-1">BCA</li>
-              <li class="std" id="class-2">MCA</li>
-              <li class="std" id="class-3">B.TECH - CS</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <label for="search" class="input-container">
+        <input
+          type="text"
+          class="input-bar"
+          name="search"
+          placeholder="Search Time-Table here"
+        />
+        <button class="btn" name="search">
+          Search
+        </button>
+      </label>
+      <div class="dropdown-container">
+        <div class="class-container">
+          <ul class="c-nav">
+            <li>
+              <label>Class</label>
+              <ul>
+                <li class="std" id="class-1">BCA</li>
+                <li class="std" id="class-2">MCA</li>
+                <li class="std" id="class-3">B.TECH - CS</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
 
-      <div class="semester-container">
-        <ul class="sem-container">
-          <li>
-            <label>Semesters</label>
-            <ul class="sem-in">
-              <li class="semester" id="semester-1"><a href="#"></a>SEMESTER I</li>
-              <li class="semester" id="semester-2"><a href="#"></a>SEMESTER II</li>
-              <li class="semester" id="semester-3"><a href="#"></a>SEMESTER III</li>
-              <li class="semester" id="semester-4"><a href="#"></a>SEMESTER IV</li>
-              <li class="semester" id="semester-5"><a href="#"></a>SEMESTER V</li>
-              <li class="semester" id="semester-6"><a href="#"></a>SEMESTER VI</li>
-            </ul>
-          </li>
-        </ul>
+        <div class="semester-container">
+          <ul class="sem-container">
+            <li>
+              <label>Semesters</label>
+              <ul class="sem-in">
+                <li class="semester" id="semester-1">
+                  <a href="#"></a>SEMESTER I
+                </li>
+                <li class="semester" id="semester-2">
+                  <a href="#"></a>SEMESTER II
+                </li>
+                <li class="semester" id="semester-3">
+                  <a href="#"></a>SEMESTER III
+                </li>
+                <li class="semester" id="semester-4">
+                  <a href="#"></a>SEMESTER IV
+                </li>
+                <li class="semester" id="semester-5">
+                  <a href="#"></a>SEMESTER V
+                </li>
+                <li class="semester" id="semester-6">
+                  <a href="#"></a>SEMESTER VI
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
-
-    <section class="timetable-container"></section>
+    <div class="screen-rotate-guide">
+      <h3>Please rotate your screen</h3>
+    </div>
+    <section class="timetable-container">
+      <div class="days-container">
+        <div class="days"></div>
+        <div class="days">MONDAY</div>
+        <div class="days">TUESDAY</div>
+        <div class="days">WEDNESDAY</div>
+        <div class="days">THURSDAY</div>
+        <div class="days">FRIDAY</div>
+      </div>
+      <div class="schedule-container">
+        <div class="time-indicator">
+          <div class="time-period"></div>
+          <div class="time-period"></div>
+          <div class="time-period"></div>
+          <div class="time-period"></div>
+          <div class="time-period"></div>
+          <div class="time-period"></div>
+          <div class="time-period"></div>
+        </div>
+        <div class="schedules">
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+          <div class="schedule"></div>
+        </div>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>
