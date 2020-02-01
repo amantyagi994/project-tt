@@ -438,7 +438,7 @@ body {
   }
   .time-table-header .input-container .btn {
     width: 10rem;
-    padding: 0.35rem 1rem 0.35rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
   }
   .time-table-header .dropdown-container {
     margin: 0;
@@ -459,8 +459,90 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .time-table-header .dropdown-container .class-container {
+    margin: 0 0 0.5rem 0;
+  }
   .time-table-header .dropdown-container .class-container label {
     margin: 0.25rem 0 0;
+  }
+  .time-table-header .dropdown-container .semester-container {
+    margin: 0 0 0.5rem 0;
+  }
+  .time-table-header .dropdown-container .semester-container label {
+    margin: 0.25rem 0 0;
+  }
+}
+
+@media (max-width: 1080px) {
+  .time-table-header {
+    position: relative;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .time-table-header .input-container {
+    margin: 0.5rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .time-table-header .input-container .input-bar {
+    width: 12rem;
+    margin: 0;
+    padding: 0.3rem 0 0.3rem 1rem;
+  }
+  .time-table-header .input-container .btn {
+    width: 10rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  .time-table-header .dropdown-container {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .time-table-header .dropdown-container .class-container {
+    margin: 0 0 0.5rem 0;
+  }
+  .time-table-header .dropdown-container .class-container label {
+    margin: 0.25rem 0 0;
+  }
+  .time-table-header .dropdown-container .semester-container {
+    margin: 0 0 0.5rem 0;
   }
   .time-table-header .dropdown-container .semester-container label {
     margin: 0.25rem 0 0;
@@ -538,7 +620,7 @@ body {
   border-radius: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 7in) {
   .timetable-container {
     visibility: hidden;
     -webkit-transform: translateX(-50%);
