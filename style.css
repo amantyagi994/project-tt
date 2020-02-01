@@ -620,7 +620,7 @@ body {
   border-radius: 0.5rem;
 }
 
-@media (max-width: 7in) {
+@media (max-width: 768px) {
   .timetable-container {
     visibility: hidden;
     -webkit-transform: translateX(-50%);
