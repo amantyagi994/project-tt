@@ -71,6 +71,9 @@ body {
 }
 
 @media (max-width: 968px) {
+  body {
+    margin: 1rem;
+  }
   .welcome {
     width: 100%;
   }
