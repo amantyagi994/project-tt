@@ -1,0 +1,315 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome {
+  height: 100vh;
+  width: 100%;
+  background: #555;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.welcome .logo-container {
+  height: 200px;
+  width: 200px;
+}
+
+.welcome .logo-container img {
+  height: inherit;
+  width: inherit;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.welcome .wlcm-txt-container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+
+.welcome .wlcm-txt-container h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.welcome .wlcm-txt-container h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.time-table-header {
+  height: 3rem;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background-color: #00ccff;
+}
+
+.time-table-header .class-container {
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.time-table-header .class-container .c-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.time-table-header .class-container .c-nav li {
+  position: relative;
+}
+
+.time-table-header .class-container .c-nav li label {
+  position: relative;
+  width: 10rem;
+  display: block;
+  color: #000000;
+  padding: 10px 25px;
+  background-color: white;
+}
+
+.time-table-header .class-container .c-nav li label:after {
+  content: "+";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.time-table-header .class-container .c-nav li label:hover {
+  color: #ff5858;
+}
+
+.time-table-header .class-container .c-nav li label:hover::after {
+  content: "-";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff5858;
+}
+
+.time-table-header .class-container .c-nav li label:hover + ul {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.time-table-header .class-container .c-nav li ul {
+  list-style: none;
+  position: absolute;
+  min-height: 100%;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  min-width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #000000;
+  padding: 10px 20px;
+  opacity: 0;
+  z-index: 55;
+  pointer-events: none;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  background-color: #555;
+}
+
+.time-table-header .class-container .c-nav li ul .std {
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding: 10px 25px;
+}
+
+.time-table-header .class-container .c-nav li ul .std:hover {
+  color: #ff5858;
+  background-color: #555;
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.time-table-header .class-container .c-nav li ul:hover {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.semester-container {
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+.semester-container .sem-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.semester-container .sem-container li {
+  position: relative;
+}
+
+.semester-container .sem-container li label {
+  position: relative;
+  width: 10rem;
+  display: block;
+  color: #000000;
+  padding: 10px 25px;
+  background-color: white;
+}
+
+.semester-container .sem-container li label:after {
+  content: "+";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.semester-container .sem-container li label:hover {
+  color: #ff5858;
+}
+
+.semester-container .sem-container li label:hover::after {
+  content: "-";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff5858;
+}
+
+.semester-container .sem-container li label:hover + ul {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.semester-container .sem-container li ul {
+  list-style: none;
+  position: absolute;
+  min-height: 100%;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  min-width: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #000000;
+  padding: 10px 20px;
+  opacity: 0;
+  z-index: 55;
+  pointer-events: none;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  background-color: #555;
+}
+
+.semester-container .sem-container li ul .semester {
+  height: 100%;
+  width: 5rem;
+  display: block;
+  padding: 10px 0;
+}
+
+.semester-container .sem-container li ul .semester:hover {
+  color: #ff5858;
+  background-color: #555;
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.semester-container .sem-container li ul:hover {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.timetable-container {
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+}
+/*# sourceMappingURL=style.css.map */
