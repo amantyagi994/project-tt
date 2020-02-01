@@ -70,9 +70,9 @@ body {
   font-weight: 700;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   body {
-    margin: 1rem;
+    margin: 0 1rem;
   }
   .welcome {
     width: 100%;
@@ -269,7 +269,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 1rem 0 0;
 }
 
 .semester-container .sem-container {
@@ -294,6 +293,7 @@ body {
   border-radius: 0.5rem;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  margin: 0 1rem 0 0;
 }
 
 .semester-container .sem-container li label:after {
@@ -459,18 +459,11 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .time-table-header .dropdown-container .class-container {
-    margin: 0.25rem 0;
+  .time-table-header .dropdown-container .class-container label {
+    margin: 0.25rem 0 0;
   }
-  .time-table-header .dropdown-container .semester-container {
-    margin: 0.25rem 0;
-  }
-  .timetable-container {
-    visibility: hidden;
-  }
-  .screen-rotate-guide {
-    position: relative;
-    visibility: visible;
+  .time-table-header .dropdown-container .semester-container label {
+    margin: 0.25rem 0 0;
   }
 }
 
@@ -543,5 +536,17 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .timetable-container {
+    visibility: hidden;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .screen-rotate-guide {
+    position: relative;
+    visibility: visible;
+  }
 }
 /*# sourceMappingURL=style.css.map */
