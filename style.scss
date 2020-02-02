@@ -1,6 +1,6 @@
 :root {
-  --bg-primary: #fec7d7;
-  --bg-secondary: #d9d4e7;
+  --bg-primary: #ffffff;
+  --bg-secondary: #edf0f5;
   --headline: #0e172c;
   --paragraph: #a7a9be;
   --button: #0e172c;
@@ -22,7 +22,7 @@ body {
 .welcome {
   height: 100vh;
   width: 100%;
-  background: var(--paragraph);
+  background: var(--bg-secondary);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -376,11 +376,11 @@ body {
     position: relative;
     height: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     .input-container {
-      margin: 0.5rem 0;
+      margin: 0.5rem auto;
+      width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -396,10 +396,10 @@ body {
       }
     }
     .dropdown-container {
-      margin: 0;
+      margin: auto;
       padding: 0;
       height: auto;
-      width: 100%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
