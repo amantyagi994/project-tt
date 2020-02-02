@@ -15,8 +15,8 @@
 }
 
 body {
-  margin: 0 4rem;
-  padding: 2px;
+  margin: 0.5rem 4rem;
+  padding: 0.2rem;
   border: 5px solid var(--headline);
 }
 
@@ -38,6 +38,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-bottom: 2px solid var(--headline);
 }
 
 .welcome .logo-container {
@@ -102,7 +103,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
+  border-bottom: 2px solid var(--headline);
 }
 
 .time-table-header .input-bar {
@@ -110,7 +112,6 @@ body {
   padding: 0.5rem 5rem 0.6rem 2rem;
   width: 20rem;
   border: 3px solid var(--headline);
-  border-radius: 2rem;
   outline: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,10 +122,9 @@ body {
 .time-table-header .btn {
   margin: 1rem 0 0 0;
   border: none;
-  border-radius: 0.5rem;
-  width: 10rem;
+  width: 12rem;
   padding: 0.75rem 0.5rem 0.75rem 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   cursor: pointer;
   outline: none;
   color: var(--btn-txt);
@@ -165,13 +165,12 @@ body {
 
 .time-table-header .class-container .c-nav li label {
   position: relative;
-  width: 10rem;
+  width: 12rem;
   display: block;
   color: var(--btn-txt);
   padding: 10px 25px;
   background-color: var(--button);
   cursor: pointer;
-  border-radius: 0.5rem;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
@@ -238,7 +237,6 @@ body {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   background-color: var(--button);
-  border-radius: 0.5rem;
 }
 
 .time-table-header .class-container .c-nav li ul .std {
@@ -284,13 +282,12 @@ body {
 
 .semester-container .sem-container li label {
   position: relative;
-  width: 10rem;
+  width: 12rem;
   display: block;
   color: var(--btn-txt);
   padding: 10px 25px;
   background-color: var(--button);
   cursor: pointer;
-  border-radius: 0.5rem;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   margin: 0 1rem 0 0;
@@ -358,7 +355,6 @@ body {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   background-color: var(--button);
-  border-radius: 0.5rem;
 }
 
 .semester-container .sem-container li ul .semester {
@@ -433,18 +429,15 @@ body {
   }
   .time-table-header .input-container .input-bar {
     width: 12rem;
-    margin: 0;
     padding: 0.3rem 0 0.3rem 1rem;
   }
   .time-table-header .input-container .btn {
-    width: 10rem;
+    width: 12rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
   }
   .time-table-header .dropdown-container {
     margin: 0;
     padding: 0;
-    height: auto;
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -488,7 +481,7 @@ body {
             justify-content: center;
   }
   .time-table-header .input-container {
-    margin: 0.5rem auto;
+    margin: 0.25rem auto;
     width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -506,12 +499,13 @@ body {
   }
   .time-table-header .input-container .input-bar {
     width: 12rem;
-    margin: 0;
-    padding: 0.3rem 0 0.3rem 1rem;
+    margin: 0.25rem;
+    padding: 0.5rem 0 0.5rem 1rem;
   }
   .time-table-header .input-container .btn {
-    width: 10rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    width: 12rem;
+    margin: 0.5rem 0 0.25rem 0;
+    padding: 0.7rem 1rem 0.7rem 1rem;
   }
   .time-table-header .dropdown-container {
     margin: auto;
@@ -547,77 +541,32 @@ body {
 }
 
 .timetable-container {
-  height: 100vh;
   width: 100%;
-  background-color: #000000;
-  padding-top: 3rem;
+  height: 100%;
+  background-color: var(--bg-secondary);
 }
 
-.timetable-container .days-container {
-  position: relative;
-  height: 4rem;
+.timetable-container table {
   width: 100%;
-  background-color: #0940aa;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1;
-      grid-template-rows: 1;
-}
-
-.timetable-container .days-container .days {
-  position: relative;
-  margin: 0.25rem;
-  display: inline-block;
-  height: 3rem;
-  background-color: #ff22ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 0.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.timetable-container .schedule-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.timetable-container table tbody .timing,
+.timetable-container table tbody .subjects {
+  height: auto;
+  width: auto;
+  background: var(--paragraph);
 }
 
-.timetable-container .schedule-container .time-indicator {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-}
-
-.timetable-container .schedule-container .time-indicator .time-period {
-  position: relative;
-  margin: 0.25rem;
-  display: inline-block;
-  height: 3rem;
-  background-color: #ff22ff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 0.5rem;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 540px) {
   .timetable-container {
     visibility: hidden;
     -webkit-transform: translateX(-50%);

@@ -14,8 +14,8 @@
 }
 
 body {
-  margin: 0 4rem;
-  padding: 2px;
+  margin: 0.5rem 4rem;
+  padding: 0.2rem;
   border: 5px solid var(--headline);
 }
 
@@ -28,6 +28,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+  border-bottom: 2px solid var(--headline);
 
   .logo-container {
     height: 200px;
@@ -86,14 +87,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--bg-secondary);
-
+  background-color: var(--bg-primary);
+  border-bottom: 2px solid var(--headline);
   .input-bar {
     margin: 1rem;
     padding: 0.5rem 5rem 0.6rem 2rem;
     width: 20rem;
     border: 3px solid var(--headline);
-    border-radius: 2rem;
+    // border-radius: 2rem;
     outline: none;
     display: flex;
     float: left;
@@ -102,10 +103,10 @@ body {
   .btn {
     margin: 1rem 0 0 0;
     border: none;
-    border-radius: 0.5rem;
-    width: 10rem;
+    // border-radius: 2rem;
+    width: 12rem;
     padding: 0.75rem 0.5rem 0.75rem 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     cursor: pointer;
     outline: none;
     color: var(--btn-txt);
@@ -133,13 +134,12 @@ body {
 
         label {
           position: relative;
-          width: 10rem;
+          width: 12rem;
           display: block;
           color: var(--btn-txt);
           padding: 10px 25px;
           background-color: var(--button);
           cursor: pointer;
-          border-radius: 0.5rem;
           transition: 0.4s ease;
 
           &:after {
@@ -192,7 +192,6 @@ body {
           pointer-events: none;
           transition: 0.4s ease;
           background-color: var(--button);
-          border-radius: 0.5rem;
 
           .std {
             display: block;
@@ -228,13 +227,12 @@ body {
 
       label {
         position: relative;
-        width: 10rem;
+        width: 12rem;
         display: block;
         color: var(--btn-txt);
         padding: 10px 25px;
         background-color: var(--button);
         cursor: pointer;
-        border-radius: 0.5rem;
         transition: 0.4s ease;
         margin: 0 1rem 0 0;
         &:after {
@@ -287,7 +285,6 @@ body {
         pointer-events: none;
         transition: 0.4s ease;
         background-color: var(--button);
-        border-radius: 0.5rem;
 
         .semester {
           height: 100%;
@@ -337,19 +334,16 @@ body {
       justify-content: center;
       .input-bar {
         width: 12rem;
-        margin: 0;
         padding: 0.3rem 0 0.3rem 1rem;
       }
       .btn {
-        width: 10rem;
+        width: 12rem;
         padding: 0.5rem 1rem 0.5rem 1rem;
       }
     }
     .dropdown-container {
       margin: 0;
       padding: 0;
-      height: auto;
-      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -379,7 +373,7 @@ body {
     align-items: center;
     justify-content: center;
     .input-container {
-      margin: 0.5rem auto;
+      margin: 0.25rem auto;
       width: 50%;
       display: flex;
       flex-direction: column;
@@ -387,12 +381,13 @@ body {
       justify-content: center;
       .input-bar {
         width: 12rem;
-        margin: 0;
-        padding: 0.3rem 0 0.3rem 1rem;
+        margin: 0.25rem;
+        padding: 0.5rem 0 0.5rem 1rem;
       }
       .btn {
-        width: 10rem;
-        padding: 0.5rem 1rem 0.5rem 1rem;
+        width: 12rem;
+        margin: 0.5rem 0 0.25rem 0;
+        padding: 0.7rem 1rem 0.7rem 1rem;
       }
     }
     .dropdown-container {
@@ -422,57 +417,28 @@ body {
 }
 
 .timetable-container {
-  height: 100vh;
   width: 100%;
-  background-color: #000000;
-  padding-top: 3rem;
+  height: 100%;
+  background-color: var(--bg-secondary);
 
-  .days-container {
-    position: relative;
-    height: 4rem;
+  table {
     width: 100%;
-    background-color: #0940aa;
-    align-content: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1;
-
-    .days {
-      position: relative;
-      margin: 0.25rem;
-      display: inline-block;
-      height: 3rem;
-      background-color: #ff22ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.5rem;
-    }
-  }
-
-  .schedule-container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .time-indicator {
-      display: grid;
-      grid-template-columns: 1fr;
-
-      .time-period {
-        position: relative;
-        margin: 0.25rem;
-        display: inline-block;
-        height: 3rem;
-        background-color: #ff22ff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 0.5rem;
+    tbody {
+      .timing,
+      .subjects {
+        height: auto;
+        width: auto;
+        background: var(--paragraph);
       }
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 540px) {
   .timetable-container {
     visibility: hidden;
     transform: translateX(-50%);
@@ -483,3 +449,15 @@ body {
     visibility: visible;
   }
 }
+
+// @media (max-width: 768px) {
+//   .timetable-container {
+//     visibility: hidden;
+//     transform: translateX(-50%);
+//   }
+
+//   .screen-rotate-guide {
+//     position: relative;
+//     visibility: visible;
+//   }
+// }
