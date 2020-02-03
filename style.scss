@@ -1,6 +1,6 @@
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #a4a4a8;
+  --bg-secondary: #cacaca;
   --bg-ternary: #ebebeba6;
   --headline: #4e0c88;
   --paragraph: #a7a9be;
@@ -198,16 +198,16 @@ body {
           display: flex;
           flex-direction: column;
           color: var(--btn-txt);
-          padding: 10px 20px;
+          padding: 10px 25px;
           opacity: 0;
-          z-index: 55;
+          z-index: 5;
           pointer-events: none;
           transition: 0.4s ease;
           background-color: var(--button);
 
           .std {
             display: block;
-            width: 6rem;
+            width: 7rem;
             padding: 10px 2px;
             &:hover {
               color: #ff5858;
@@ -303,7 +303,7 @@ body {
 
           .semester {
             display: block;
-            width: 6rem;
+            width: 7rem;
             padding: 10px 2px;
             &:hover {
               color: #ff5858;
@@ -341,7 +341,7 @@ body {
 
   .time-table-header {
     position: relative;
-    height: auto;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -398,7 +398,7 @@ body {
     justify-content: center;
     .input-container {
       margin: 0.25rem auto;
-      width: 50%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -415,25 +415,24 @@ body {
       }
     }
     .dropdown-container {
-      margin: auto;
       padding: 0;
       height: auto;
-      width: 50%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 
       .class-container {
-        margin: 0 0 0.5rem 0;
+        margin: 0.25rem 0 0.25rem 0;
         label {
-          margin: 0.25rem 0 0;
+          margin: 0.25rem 0 0 0;
         }
       }
       .semester-container {
-        margin: 0 0 0.5rem 0;
+        margin: 0 0 0.25rem 0;
         label {
-          margin: 0.25rem 0 0;
+          margin: 0.25rem 0 0 0;
         }
       }
     }

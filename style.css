@@ -1,6 +1,6 @@
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #a4a4a8;
+  --bg-secondary: #cacaca;
   --bg-ternary: #ebebeba6;
   --headline: #4e0c88;
   --paragraph: #a7a9be;
@@ -249,9 +249,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: var(--btn-txt);
-  padding: 10px 20px;
+  padding: 10px 25px;
   opacity: 0;
-  z-index: 55;
+  z-index: 5;
   pointer-events: none;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -260,7 +260,7 @@ body {
 
 .time-table-header .class-container .c-nav li ul .std {
   display: block;
-  width: 6rem;
+  width: 7rem;
   padding: 10px 2px;
 }
 
@@ -381,7 +381,7 @@ body {
 
 .time-table-header .semester-container .sem-container li ul .semester {
   display: block;
-  width: 6rem;
+  width: 7rem;
   padding: 10px 2px;
 }
 
@@ -426,7 +426,7 @@ body {
   }
   .time-table-header {
     position: relative;
-    height: auto;
+    height: 100%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -516,7 +516,7 @@ body {
   }
   .time-table-header .input-container {
     margin: 0.25rem auto;
-    width: 50%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -542,10 +542,9 @@ body {
     padding: 0.7rem 1rem 0.7rem 1rem;
   }
   .time-table-header .dropdown-container {
-    margin: auto;
     padding: 0;
     height: auto;
-    width: 50%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -561,16 +560,16 @@ body {
             justify-content: center;
   }
   .time-table-header .dropdown-container .class-container {
-    margin: 0 0 0.5rem 0;
+    margin: 0.25rem 0 0.25rem 0;
   }
   .time-table-header .dropdown-container .class-container label {
-    margin: 0.25rem 0 0;
+    margin: 0.25rem 0 0 0;
   }
   .time-table-header .dropdown-container .semester-container {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.25rem 0;
   }
   .time-table-header .dropdown-container .semester-container label {
-    margin: 0.25rem 0 0;
+    margin: 0.25rem 0 0 0;
   }
 }
 
