@@ -18,9 +18,8 @@
 }
 
 body {
-  margin: 1rem 0.75rem;
-  padding: 0.25rem;
-  border: 5px solid var(--headline);
+  margin: 0.5rem 1rem;
+  padding: 0.2rem;
   font-family: var(--montserrat);
 }
 
@@ -399,8 +398,6 @@ body {
 
 .screen-rotate-guide {
   height: 100vh;
-  position: relative;
-  top: 0;
   background-color: #000000;
   color: var(--btn-txt);
   opacity: 0;
@@ -414,6 +411,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   text-align: center;
 }
 

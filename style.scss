@@ -17,9 +17,8 @@
 }
 
 body {
-  margin: 1rem 0.75rem;
-  padding: 0.25rem;
-  border: 5px solid var(--headline);
+  margin: 0.5rem 1rem;
+  padding: 0.2rem;
   font-family: var(--montserrat);
 }
 
@@ -113,6 +112,7 @@ body {
   .btn {
     margin: 0.25rem 0 0.5rem 0;
     border: none;
+    // border-radius: 2rem;
     width: 12rem;
     padding: 0.75rem 0.5rem 0.75rem 0.5rem;
     font-size: 0.75rem;
@@ -132,6 +132,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    // float: left;
+    // margin: 0 1rem;
     border: none;
     .c-nav {
       display: flex;
@@ -321,15 +323,16 @@ body {
 
 .screen-rotate-guide {
   height: 100vh;
-  position: relative;
-  top: 0;
   background-color: #000000;
   color: var(--btn-txt);
+  // display: none;
   opacity: 0;
   visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  transform: translateY(-50%);
   text-align: center;
 }
 
