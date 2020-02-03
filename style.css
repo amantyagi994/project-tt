@@ -18,7 +18,7 @@
 }
 
 body {
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
   padding: 0.2rem;
   font-family: var(--montserrat);
 }
@@ -97,13 +97,15 @@ body {
 }
 
 .table-container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-bottom: 2px solid var(--headline);
 }
 
 .time-table-header {
-  height: inherit;
+  height: 100%;
   width: 33%;
   position: relative;
   display: -webkit-box;
@@ -119,8 +121,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 3rem;
   background-color: var(--bg-primary);
-  border-bottom: 2px solid var(--headline);
 }
 
 .time-table-header .input-bar {
@@ -153,6 +155,8 @@ body {
 }
 
 .time-table-header .class-container {
+  width: 12rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,7 +185,7 @@ body {
   position: relative;
 }
 
-.time-table-header .class-container .c-nav li label {
+.time-table-header .class-container .c-nav li .classes {
   position: relative;
   width: 12rem;
   display: block;
@@ -193,7 +197,7 @@ body {
   transition: 0.4s ease;
 }
 
-.time-table-header .class-container .c-nav li label:after {
+.time-table-header .class-container .c-nav li .classes:after {
   content: "+";
   display: block;
   position: absolute;
@@ -206,11 +210,11 @@ body {
   font-weight: 500;
 }
 
-.time-table-header .class-container .c-nav li label:hover {
+.time-table-header .class-container .c-nav li .classes:hover {
   color: #ff5858;
 }
 
-.time-table-header .class-container .c-nav li label:hover::after {
+.time-table-header .class-container .c-nav li .classes:hover::after {
   content: "-";
   display: block;
   position: absolute;
@@ -224,7 +228,7 @@ body {
   color: #ff5858;
 }
 
-.time-table-header .class-container .c-nav li label:hover + ul {
+.time-table-header .class-container .c-nav li .classes:hover + ul {
   opacity: 1;
   pointer-events: all;
 }
@@ -275,19 +279,30 @@ body {
   pointer-events: all;
 }
 
+.time-table-header .class-container:hover + .semester-container {
+  -webkit-transform: translateY(8.55rem);
+          transform: translateY(8.55rem);
+}
+
 .time-table-header .semester-container {
+  width: 12rem;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  float: left;
-  margin: 0 1rem;
   border: none;
+  -webkit-transition: 0.26s ease;
+  transition: 0.26s ease;
 }
 
 .time-table-header .semester-container .sem-container {
@@ -412,8 +427,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
   text-align: center;
 }
 
@@ -580,12 +595,12 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--bg-primary);
-  border-bottom: 2px solid var(--headline);
+  margin: 0 0 0.25rem 0;
 }
 
 .timetable-container table {
-  margin: 0.5rem 0;
-  height: 100%;
+  margin: 0.5rem 0 0 0;
+  height: 98vh;
   width: 100%;
   display: table;
   border: 1px solid var(--bg-secondary);
@@ -646,8 +661,8 @@ body {
     width: 100%;
     position: relative;
     visibility: visible;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
     opacity: 1;
   }
 }
