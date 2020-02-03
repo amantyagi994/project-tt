@@ -412,8 +412,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   text-align: center;
 }
 
