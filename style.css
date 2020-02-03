@@ -397,25 +397,6 @@ body {
   pointer-events: all;
 }
 
-.screen-rotate-guide {
-  height: 100vh;
-  background-color: #000000;
-  color: var(--btn-txt);
-  visibility: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 @media (max-width: 768px) {
   .table-container {
     display: -webkit-box;
@@ -445,7 +426,7 @@ body {
             justify-content: center;
   }
   .time-table-header .input-container {
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -633,9 +614,12 @@ body {
   border: 1px solid var(--bg-secondary);
 }
 
-@media (max-width: 540px) {
+@media (max-width: 480px) {
   .timetable-container {
     visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .screen-rotate-guide {
     position: relative;
