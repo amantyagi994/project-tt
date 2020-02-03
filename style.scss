@@ -332,6 +332,7 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
+  transform: translateY(-50%);
   text-align: center;
 }
 
@@ -505,6 +506,7 @@ body {
     width: 100%;
     position: relative;
     visibility: visible;
+    transform: translateY(0);
     opacity: 1;
   }
 }

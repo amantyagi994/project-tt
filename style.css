@@ -412,6 +412,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   text-align: center;
 }
 
@@ -644,6 +646,8 @@ body {
     width: 100%;
     position: relative;
     visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
