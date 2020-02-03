@@ -1,10 +1,13 @@
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #edf0f5;
-  --headline: #0e172c;
+  --bg-secondary: #a4a4a8;
+  --bg-ternary: #ebebeba6;
+  --headline: #4e0c88;
   --paragraph: #a7a9be;
-  --button: #0e172c;
+  --purp1: #7912ce;
   --btn-txt: #fffffe;
+  --button: #7746ea;
+  --montserrat: "Montserrat", sans-serif;
 }
 
 * {
@@ -15,15 +18,16 @@
 }
 
 body {
-  margin: 0.5rem 4rem;
+  margin: 0.5rem 1rem;
   padding: 0.2rem;
   border: 5px solid var(--headline);
+  font-family: var(--montserrat);
 }
 
 .welcome {
   height: 100vh;
   width: 100%;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,8 +53,10 @@ body {
 .welcome .logo-container img {
   height: inherit;
   width: inherit;
-  border: none;
+  padding: 0.25rem;
+  border: 5px solid var(--button);
   border-radius: 50%;
+  overflow: hidden;
   background-color: transparent;
 }
 
@@ -62,18 +68,19 @@ body {
 }
 
 .welcome .wlcm-txt-container h2 {
+  font-family: var(--montserrat);
   font-size: 2rem;
-  font-weight: 900;
 }
 
 .welcome .wlcm-txt-container h3 {
+  font-family: var(--montserrat);
   font-size: 1.5rem;
   font-weight: 700;
 }
 
 @media (max-width: 768px) {
   body {
-    margin: 0 1rem;
+    margin: 0.5rem 1rem;
   }
   .welcome {
     width: 100%;
@@ -90,37 +97,46 @@ body {
   }
 }
 
+.table-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .time-table-header {
-  height: 3rem;
-  width: 100%;
+  height: inherit;
+  width: 33%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: var(--bg-primary);
   border-bottom: 2px solid var(--headline);
 }
 
 .time-table-header .input-bar {
-  margin: 1rem;
-  padding: 0.5rem 5rem 0.6rem 2rem;
-  width: 20rem;
+  margin: 0.5rem 0 0.25rem 0;
+  padding: 0.5em 0 0.6rem 0.25rem;
+  width: 12rem;
   border: 3px solid var(--headline);
   outline: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  float: left;
 }
 
 .time-table-header .btn {
-  margin: 1rem 0 0 0;
+  margin: 0.25rem 0 0.5rem 0;
   border: none;
   width: 12rem;
   padding: 0.75rem 0.5rem 0.75rem 0.5rem;
@@ -141,14 +157,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  float: left;
-  margin: 0 1rem;
   border: none;
 }
 
@@ -157,6 +175,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  margin: 0 0 0.5rem 0;
 }
 
 .time-table-header .class-container .c-nav li {
@@ -257,7 +276,7 @@ body {
   pointer-events: all;
 }
 
-.semester-container {
+.time-table-header .semester-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,20 +286,24 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  float: left;
+  margin: 0 1rem;
+  border: none;
 }
 
-.semester-container .sem-container {
+.time-table-header .semester-container .sem-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  margin-bottom: 0.5rem;
 }
 
-.semester-container .sem-container li {
+.time-table-header .semester-container .sem-container li {
   position: relative;
 }
 
-.semester-container .sem-container li label {
+.time-table-header .semester-container .sem-container li label {
   position: relative;
   width: 12rem;
   display: block;
@@ -290,10 +313,9 @@ body {
   cursor: pointer;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
-  margin: 0 1rem 0 0;
 }
 
-.semester-container .sem-container li label:after {
+.time-table-header .semester-container .sem-container li label:after {
   content: "+";
   display: block;
   position: absolute;
@@ -306,11 +328,11 @@ body {
   font-weight: 500;
 }
 
-.semester-container .sem-container li label:hover {
+.time-table-header .semester-container .sem-container li label:hover {
   color: #ff5858;
 }
 
-.semester-container .sem-container li label:hover::after {
+.time-table-header .semester-container .sem-container li label:hover::after {
   content: "-";
   display: block;
   position: absolute;
@@ -324,12 +346,12 @@ body {
   color: #ff5858;
 }
 
-.semester-container .sem-container li label:hover + ul {
+.time-table-header .semester-container .sem-container li label:hover + ul {
   opacity: 1;
   pointer-events: all;
 }
 
-.semester-container .sem-container li ul {
+.time-table-header .semester-container .sem-container li ul {
   list-style: none;
   position: absolute;
   min-height: 100%;
@@ -357,21 +379,20 @@ body {
   background-color: var(--button);
 }
 
-.semester-container .sem-container li ul .semester {
-  height: 100%;
-  width: 7rem;
+.time-table-header .semester-container .sem-container li ul .semester {
   display: block;
-  padding: 10px 0;
+  width: 6rem;
+  padding: 10px 2px;
 }
 
-.semester-container .sem-container li ul .semester:hover {
+.time-table-header .semester-container .sem-container li ul .semester:hover {
   color: #ff5858;
   cursor: pointer;
   opacity: 1;
   pointer-events: all;
 }
 
-.semester-container .sem-container li ul:hover {
+.time-table-header .semester-container .sem-container li ul:hover {
   opacity: 1;
   pointer-events: all;
 }
@@ -394,9 +415,19 @@ body {
 }
 
 @media (max-width: 768px) {
+  .table-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .time-table-header {
     position: relative;
     height: auto;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -467,6 +498,9 @@ body {
 }
 
 @media (max-width: 1080px) {
+  body {
+    margin: 0.5rem 1rem;
+  }
   .time-table-header {
     position: relative;
     height: auto;
@@ -543,34 +577,64 @@ body {
 .timetable-container {
   width: 100%;
   height: 100%;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
+  border-bottom: 2px solid var(--headline);
 }
 
 .timetable-container table {
+  margin: 0.5rem 0;
+  height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: table;
+  border: 1px solid var(--bg-secondary);
+  border-spacing: 0;
+}
+
+.timetable-container table thead th {
+  height: 3rem;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  cursor: context-menu;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--bg-secondary);
+}
+
+.timetable-container table thead th:hover {
+  background-color: var(--bg-primary);
+  border: 2px solid var(--headline);
 }
 
 .timetable-container table tbody .timing,
 .timetable-container table tbody .subjects {
-  height: auto;
+  margin: 0;
+  height: 3rem;
   width: auto;
-  background: var(--paragraph);
+  cursor: pointer;
+  background-color: var(--bg-ternary);
+}
+
+.timetable-container table tbody .timing:nth-child(even),
+.timetable-container table tbody .subjects:nth-child(even) {
+  background-color: var(--bg-secondary);
+}
+
+.timetable-container table tbody .timing td,
+.timetable-container table tbody .subjects td {
+  text-align: center;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.timetable-container table tbody .timing td:hover,
+.timetable-container table tbody .subjects td:hover {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--bg-secondary);
 }
 
 @media (max-width: 540px) {
   .timetable-container {
     visibility: hidden;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
   .screen-rotate-guide {
     position: relative;
