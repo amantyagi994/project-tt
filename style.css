@@ -17,10 +17,12 @@
   padding: 0;
 }
 
+html,
 body {
   margin: 0.5rem 0.5rem 0 0.5rem;
   padding: 0.2rem;
   font-family: var(--montserrat);
+  scroll-behavior: smooth;
 }
 
 .welcome {
@@ -75,6 +77,53 @@ body {
   font-family: var(--montserrat);
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.welcome .view-btn-container {
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+
+.welcome .view-btn-container .view {
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+  background: transparent;
+  margin-top: 10px;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 5px 15px -5px #00000070;
+          box-shadow: 0 5px 15px -5px #00000070;
+  color: #000000;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: 0.75s ease;
+  transition: 0.75s ease;
+  outline: none;
+}
+
+.welcome .view-btn-container .view:hover {
+  border: 2px solid var(--button);
+}
+
+.welcome .view-btn-container .view span {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+  background: transparent;
 }
 
 @media (max-width: 768px) {
@@ -178,7 +227,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 0 0 0.5rem 0;
+  margin: 0.25rem 0 0.5rem 0;
 }
 
 .time-table-header .class-container .c-nav li {
@@ -699,11 +748,6 @@ body {
   border: 2px solid var(--bg-secondary);
 }
 
-.timetable-container table thead th:hover {
-  background-color: var(--bg-primary);
-  border: 2px solid var(--headline);
-}
-
 .timetable-container table tbody .timing,
 .timetable-container table tbody .subjects {
   margin: 0;
@@ -729,7 +773,7 @@ body {
 .timetable-container table tbody .timing td:hover,
 .timetable-container table tbody .subjects td:hover {
   background-color: var(--bg-primary);
-  border: 1px solid var(--bg-secondary);
+  border: 1px solid var(--headline);
 }
 
 @media (max-width: 540px) {

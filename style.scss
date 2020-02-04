@@ -16,10 +16,12 @@
   padding: 0;
 }
 
+html,
 body {
   margin: 0.5rem 0.5rem 0 0.5rem;
   padding: 0.2rem;
   font-family: var(--montserrat);
+  scroll-behavior: smooth;
 }
 
 .welcome {
@@ -61,6 +63,45 @@ body {
       font-family: var(--montserrat);
       font-size: 1.5rem;
       font-weight: 700;
+    }
+  }
+
+  .view-btn-container {
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+    background: transparent;
+
+    .view {
+      display: inline-block;
+      width: 4rem;
+      height: 2rem;
+      background: transparent;
+      margin-top: 10px;
+      border: 2px solid transparent;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px -5px #00000070;
+      color: #000000;
+      overflow: hidden;
+      position: relative;
+      text-decoration: none;
+      text-align: center;
+      transition: 0.75s ease;
+      outline: none;
+
+      &:hover {
+        border: 2px solid var(--button);
+      }
+
+      span {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        background: transparent;
+      }
     }
   }
 }
@@ -140,7 +181,7 @@ body {
     .c-nav {
       display: flex;
       list-style-type: none;
-      margin: 0 0 0.5rem 0;
+      margin: 0.25rem 0 0.5rem 0;
 
       li {
         position: relative;
@@ -522,10 +563,6 @@ body {
         cursor: context-menu;
         background-color: var(--bg-secondary);
         border: 2px solid var(--bg-secondary);
-        &:hover {
-          background-color: var(--bg-primary);
-          border: 2px solid var(--headline);
-        }
       }
     }
 
@@ -546,7 +583,7 @@ body {
           border: 1px solid transparent;
           &:hover {
             background-color: var(--bg-primary);
-            border: 1px solid var(--bg-secondary);
+            border: 1px solid var(--headline);
           }
         }
       }
