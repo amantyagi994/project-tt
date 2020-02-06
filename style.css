@@ -646,6 +646,10 @@ body {
   .time-table-header .dropdown-container .semester-container label {
     margin: 0.25rem 0 0 0;
   }
+  .time-table-header .class-container:hover + .semester-container {
+    -webkit-transform: translateY(8.55rem);
+            transform: translateY(8.55rem);
+  }
 }
 
 .timetable-container {

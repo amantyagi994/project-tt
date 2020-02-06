@@ -497,6 +497,9 @@ body {
         }
       }
     }
+    .class-container:hover + .semester-container {
+      transform: translateY(8.55rem);
+    }
   }
 }
 
