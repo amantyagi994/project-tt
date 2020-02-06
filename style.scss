@@ -19,7 +19,7 @@
 html,
 body {
   margin: 0.5rem 0.5rem 0 0.5rem;
-  padding: 0.2rem;
+  padding: 0.1rem;
   font-family: var(--montserrat);
   scroll-behavior: smooth;
 }
@@ -384,119 +384,19 @@ body {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .table-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .time-table-header {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .input-container {
-      margin: 0.25rem 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      .input-bar {
-        width: 12rem;
-        padding: 0.3rem 0 0.3rem 1rem;
-      }
-      .btn {
-        width: 12rem;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-      }
-    }
-    .dropdown-container {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      .class-container {
-        margin: 0 0 0.5rem 0;
-        label {
-          margin: 0.25rem 0 0;
-        }
-      }
-      .semester-container {
-        margin: 0 0 0.5rem 0;
-        label {
-          margin: 0.25rem 0 0;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1080px) {
-  .table-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .time-table-header {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .input-container {
-      margin: 0.25rem 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      .input-bar {
-        width: 12rem;
-        padding: 0.3rem 0 0.3rem 1rem;
-      }
-      .btn {
-        width: 12rem;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-      }
-    }
-    .dropdown-container {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      .class-container {
-        margin: 0 0 0.5rem 0;
-        label {
-          margin: 0.25rem 0 0;
-        }
-      }
-      .semester-container {
-        margin: 0 0 0.5rem 0;
-        label {
-          margin: 0.25rem 0 0;
-        }
-      }
-    }
-  }
-}
-
 @media (max-width: 1080px) {
   body {
     margin: 0.5rem 1rem;
   }
+  .table-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .time-table-header {
     position: relative;
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -519,22 +419,79 @@ body {
       }
     }
     .dropdown-container {
+      margin: 0;
       padding: 0;
       height: auto;
       width: 100%;
+      display: flex;
+      // flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .class-container {
+        margin: 0 0.25rem;
+        label {
+          // margin: 0.25rem 0 0 0;
+        }
+      }
+      .semester-container {
+        margin: 0 0.25rem;
+        label {
+          margin: 0.25rem 0 0 0;
+        }
+      }
+    }
+    .class-container:hover + .semester-container {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .time-table-header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .input-container {
+      margin: 0.25rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .input-bar {
+        width: 12rem;
+        padding: 0.3rem 0 0.3rem 1rem;
+      }
+      .btn {
+        width: 12rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+      }
+    }
+    .dropdown-container {
+      margin: 0 0 2rem 0;
+      padding: 0 0 5rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 
       .class-container {
-        margin: 0.25rem 0 0.25rem 0;
+        margin: 0 0 0.25rem 0;
         label {
           margin: 0.25rem 0 0 0;
         }
       }
       .semester-container {
-        margin: 0 0 0.25rem 0;
+        margin: 0 0 0.5rem 0;
         label {
           margin: 0.25rem 0 0 0;
         }
