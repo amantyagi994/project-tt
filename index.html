@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Compiled and minified CSS -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    /> -->
+
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
@@ -32,7 +28,7 @@
     </section>
     <div class="table-container" id="time-table-container">
       <section class="time-table-header">
-        <label for="search" class="input-container">
+        <label for="search" class="search-container">
           <input
             type="text"
             class="input-bar"
@@ -174,6 +170,76 @@
           </tbody>
         </table>
       </section>
+    </div>
+
+    <div>
+      <div id="form-container" class="main-container">
+        <h2>Wanna contact us:</h2>
+        <div class="form">
+          <!-- the text-input class will be used as parent for input styling -->
+          <div class="input-container">
+            <input
+              id="first-name"
+              type="text"
+              placeholder="Firstname"
+              autocomplete="off"
+              required
+            />
+            <label for="first-name"> First Name</label>
+          </div>
+          <div class="input-container">
+            <input
+              id="last-name"
+              type="text"
+              placeholder="Lastname"
+              autocomplete="off"
+              required
+            />
+            <label for="last-name">Last Name</label>
+          </div>
+          <div class="input-container">
+            <input
+              id="username"
+              type="text"
+              placeholder="Username"
+              autocomplete="off"
+              required
+            />
+            <label for="username">Username</label>
+          </div>
+
+          <div class="input-container">
+            <input
+              id="email"
+              type="email"
+              placeholder="E-mail"
+              autocomplete="off"
+              required
+            />
+            <label for="email">E-mail</label>
+          </div>
+          <div class="input-container">
+            <input
+              id="mobile"
+              type="tel"
+              placeholder="Mobile"
+              autocomplete="off"
+              required
+            />
+            <label for="mobile">Mobile No.</label>
+          </div>
+          <div class="input-container">
+            <input
+              id="password"
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+              required
+            />
+            <label for="password">Password</label>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Compiled and minified JavaScript -->
