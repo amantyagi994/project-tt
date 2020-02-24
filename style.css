@@ -145,27 +145,17 @@ body {
 }
 
 .table-container {
-  position: relative;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-bottom: 2px solid var(--headline);
 }
 
 .time-table-header {
-  margin-top: 0;
-  height: 60%;
-  width: 30%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 170px;
+  width: 400px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,12 +169,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 3rem;
   background-color: var(--bg-primary);
 }
 
 .time-table-header .input-bar {
-  margin: 0 0 0.25rem 0;
-  padding: 0.6rem 0 0.6rem 0.25rem;
+  margin: 0.5rem 0 0.25rem 0;
+  padding: 0.5em 0 0.6rem 0.25rem;
   width: 12rem;
   border: 3px solid var(--headline);
   outline: none;
@@ -612,118 +603,88 @@ body {
   }
 }
 
-@media only screen and (max-width: 992px) {
-  table.responsive-table {
+.timetable-container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  margin: 0 0 0.25rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timetable-container table {
+  margin: 0.5rem 0 0 0;
+  height: 500px;
+  width: 100%;
+  display: table;
+  border: 1px solid var(--bg-secondary);
+  border-spacing: 0;
+}
+
+.timetable-container table thead th {
+  height: 3rem;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  cursor: context-menu;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--bg-secondary);
+}
+
+.timetable-container table tbody .timing,
+.timetable-container table tbody .subjects {
+  margin: 0;
+  height: 3rem;
+  width: auto;
+  cursor: pointer;
+  background-color: var(--bg-ternary);
+}
+
+.timetable-container table tbody .timing:nth-child(even),
+.timetable-container table tbody .subjects:nth-child(even) {
+  background-color: var(--bg-secondary);
+}
+
+.timetable-container table tbody .timing td,
+.timetable-container table tbody .subjects td {
+  text-align: center;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.timetable-container table tbody .timing td:hover,
+.timetable-container table tbody .subjects td:hover {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--headline);
+}
+
+@media only screen and (max-width: 768px) {
+  .timetable-container table.responsive-table {
     width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
     display: block;
     position: relative;
-    /* sort out borders */
+    border-spacing: 0;
+    border-collapse: collapse;
   }
-  table.responsive-table td:empty:before {
-    content: "\00a0";
-  }
-  table.responsive-table th,
-  table.responsive-table td {
+  .timetable-container table.responsive-table th,
+  .timetable-container table.responsive-table td {
     margin: 0;
     vertical-align: top;
   }
-  table.responsive-table th {
+  .timetable-container table.responsive-table th {
     text-align: left;
   }
-  table.responsive-table thead {
+  .timetable-container table.responsive-table thead {
     display: block;
     float: left;
   }
-  table.responsive-table thead tr {
+  .timetable-container table.responsive-table thead tr {
     display: block;
     padding: 0 10px 0 0;
-  }
-  table.responsive-table thead tr th::before {
-    content: "\00a0";
-  }
-  table.responsive-table tbody {
-    display: block;
-    width: auto;
-    position: relative;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  table.responsive-table tbody tr {
-    display: inline-block;
-    vertical-align: top;
-  }
-  table.responsive-table th {
-    display: block;
-    text-align: right;
-  }
-  table.responsive-table td {
-    display: block;
-    min-height: 1.25em;
-    text-align: left;
-  }
-  table.responsive-table tr {
-    border-bottom: none;
-    padding: 0 10px;
-  }
-  table.responsive-table thead {
-    border: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.12);
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  .timetable-container {
-    position: relative;
-    right: 0;
-    float: right;
-    width: 70%;
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color: var(--bg-primary);
-    margin: 0 0 0.25rem 0;
-  }
-  .timetable-container table {
-    margin: 0.5rem 0 0 0;
-    height: 400px;
-    width: 100%;
-    display: table;
-    border: 1px solid var(--bg-secondary);
-    border-spacing: 0;
-  }
-  .timetable-container table thead th {
-    height: 3rem;
-    cursor: context-menu;
-    background-color: var(--bg-secondary);
-  }
-  .timetable-container table tbody .subjects {
-    margin: 0;
-    height: 3rem;
-    width: auto;
-    cursor: pointer;
-    background-color: var(--bg-ternary);
-  }
-  .timetable-container table tbody .subjects:nth-child(even) {
-    background-color: var(--bg-secondary);
-  }
-  .timetable-container table tbody .subjects td {
-    text-align: center;
-    -webkit-transition: 0.25s ease;
-    transition: 0.25s ease;
-    border: 1px solid transparent;
-  }
-  .timetable-container table tbody .subjects td:hover {
-    background-color: var(--bg-primary);
-    border: 1px solid var(--headline);
   }
 }
 

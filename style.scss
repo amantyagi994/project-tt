@@ -21,6 +21,7 @@ body {
   margin: 0.5rem 0.5rem 0 0.5rem;
   font-family: var(--montserrat);
   scroll-behavior: smooth;
+  // overflow-x: hidden;
 }
 
 .welcome {
@@ -127,29 +128,24 @@ body {
 }
 
 .table-container {
-  position: relative;
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   border-bottom: 2px solid var(--headline);
 }
 
 .time-table-header {
-  margin-top: 0;
-  height: 60%;
-  width: 30%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 170px;
+  width: 400px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 3rem;
   background-color: var(--bg-primary);
   .input-bar {
-    margin: 0 0 0.25rem 0;
-    padding: 0.6rem 0 0.6rem 0.25rem;
+    margin: 0.5rem 0 0.25rem 0;
+    padding: 0.5em 0 0.6rem 0.25rem;
     width: 12rem;
     border: 3px solid var(--headline);
     outline: none;
@@ -356,20 +352,6 @@ body {
   }
 }
 
-// .screen-rotate-guide {
-//   height: 100vh;
-//   background-color: #000000;
-//   color: var(--btn-txt);
-//   opacity: 0;
-//   visibility: hidden;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: absolute;
-//   transform: translateY(-200%);
-//   text-align: center;
-// }
-
 @media (max-width: 1080px) {
   body {
     margin: 0.5rem 1rem;
@@ -428,8 +410,6 @@ body {
   }
 }
 
-// here
-
 @media (max-width: 768px) {
   .table-container {
     display: flex;
@@ -482,157 +462,87 @@ body {
   }
 }
 
-@media only screen and (max-width: 992px) {
-  table.responsive-table {
+.timetable-container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  margin: 0 0 0.25rem 0;
+  display: flex;
+  align-items: center;
+
+  table {
+    margin: 0.5rem 0 0 0;
+    height: 500px;
     width: 100%;
-    border-collapse: collapse;
+    display: table;
+    border: 1px solid var(--bg-secondary);
     border-spacing: 0;
-    display: block;
-    position: relative;
-    /* sort out borders */
-  }
-  table.responsive-table td:empty:before {
-    content: "\00a0";
-  }
-  table.responsive-table th,
-  table.responsive-table td {
-    margin: 0;
-    vertical-align: top;
-  }
-  table.responsive-table th {
-    text-align: left;
-  }
-  table.responsive-table thead {
-    display: block;
-    float: left;
-  }
-  table.responsive-table thead tr {
-    display: block;
-    padding: 0 10px 0 0;
-  }
-  table.responsive-table thead tr th::before {
-    content: "\00a0";
-  }
-  table.responsive-table tbody {
-    display: block;
-    width: auto;
-    position: relative;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  table.responsive-table tbody tr {
-    display: inline-block;
-    vertical-align: top;
-  }
-  table.responsive-table th {
-    display: block;
-    text-align: right;
-  }
-  table.responsive-table td {
-    display: block;
-    min-height: 1.25em;
-    text-align: left;
-  }
-  table.responsive-table tr {
-    border-bottom: none;
-    padding: 0 10px;
-  }
-  table.responsive-table thead {
-    border: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.12);
-  }
-}
-
-@media screen and (min-width: 1080px) {
-  .timetable-container {
-    position: relative;
-    right: 0;
-    float: right;
-    width: 70%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-primary);
-    margin: 0 0 0.25rem 0;
-
-    table {
-      margin: 0.5rem 0 0 0;
-      height: 400px;
-      width: 100%;
-      display: table;
-      border: 1px solid var(--bg-secondary);
-      border-spacing: 0;
-      thead {
-        th {
-          height: 3rem;
-          cursor: context-menu;
-          background-color: var(--bg-secondary);
-          // border: 2px solid var(--bg-secondary);
-        }
+    thead {
+      th {
+        height: 3rem;
+        transition: 0.25s ease;
+        cursor: context-menu;
+        background-color: var(--bg-secondary);
+        border: 2px solid var(--bg-secondary);
       }
+    }
 
-      tbody {
-        .subjects {
-          margin: 0;
-          height: 3rem;
-          width: auto;
-          cursor: pointer;
-          background-color: var(--bg-ternary);
-          &:nth-child(even) {
-            background-color: var(--bg-secondary);
-          }
-          td {
-            text-align: center;
-            transition: 0.25s ease;
-            border: 1px solid transparent;
-            &:hover {
-              background-color: var(--bg-primary);
-              border: 1px solid var(--headline);
-            }
+    tbody {
+      .timing,
+      .subjects {
+        margin: 0;
+        height: 3rem;
+        width: auto;
+        cursor: pointer;
+        background-color: var(--bg-ternary);
+        &:nth-child(even) {
+          background-color: var(--bg-secondary);
+        }
+        td {
+          text-align: center;
+          transition: 0.25s ease;
+          border: 1px solid transparent;
+          &:hover {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--headline);
           }
         }
       }
     }
   }
 }
-// @media (max-width: 540px) {
-//   .timetable-container {
-//     overflow-x: scroll;
-//     thead {
-//       display: block;
-//       float: left;
-//       tr {
-//         display: block;
-//       }
-//     }
-//     tbody {
-//       display: block;
-//       width: auto;
-//       position: relative;
-//       overflow-x: auto;
-//       white-space: nowrap;
-//       tr {
-//         display: inline-block;
-//         vertical-align: top;
-//       }
-//     }
-// display: none;
-// visibility: hidden;
-// opacity: 0;
-// transform: translateX(-50%);
-// }
 
-// .screen-rotate-guide {
-//   width: 100%;
-//   position: relative;
-//   visibility: visible;
-//   transform: translateY(0%);
-//   opacity: 1;
-//   border-radius: 1rem;
-//   margin-bottom: 1rem;
-// }
-// }
+@media only screen and (max-width: 768px) {
+  .timetable-container {
+    table.responsive-table {
+      width: 100%;
+      display: block;
+      position: relative;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    table.responsive-table th,
+    table.responsive-table td {
+      margin: 0;
+      vertical-align: top;
+    }
+
+    table.responsive-table th {
+      text-align: left;
+    }
+
+    table.responsive-table thead {
+      display: block;
+      float: left;
+    }
+
+    table.responsive-table thead tr {
+      display: block;
+      padding: 0 10px 0 0;
+    }
+  }
+}
 
 // contact page styles
 
