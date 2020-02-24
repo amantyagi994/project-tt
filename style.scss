@@ -486,7 +486,6 @@ table.responsive-table {
   margin: 0.5rem 0 0 0;
   height: 500px;
   width: 100%;
-  border-collapse: collapse;
   border-spacing: 0;
   display: table;
   border: 1px solid var(--bg-secondary);
@@ -513,10 +512,10 @@ table.responsive-table {
       }
       td {
         text-align: center;
-        transition: background 0.25s ease;
+        transition: 0.25s ease;
         border: 1px solid transparent;
         &:hover {
-          background-color: var(--bg-primary);
+          background: var(--bg-primary);
           border: 1px solid var(--purp1);
         }
       }
