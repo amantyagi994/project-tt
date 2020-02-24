@@ -1,9 +1,8 @@
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #cacaca;
-  --bg-ternary: #ebebeba6;
-  --headline: #4e0c88;
-  --paragraph: #a7a9be;
+  --bg-secondary: #eeeeee;
+  --bg-ternary: #dddddd;
+  --paragraph: #aaaaaa;
   --purp1: #7912ce;
   --btn-txt: #fffffe;
   --button: #7746ea;
@@ -15,6 +14,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 html,
@@ -42,7 +42,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 2px solid var(--headline);
+  border-bottom: 2px solid var(--purp1);
 }
 
 .welcome .logo-container {
@@ -149,7 +149,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 2px solid var(--headline);
+  border-bottom: 2px solid var(--purp1);
 }
 
 .time-table-header {
@@ -177,7 +177,7 @@ body {
   margin: 0.5rem 0 0.25rem 0;
   padding: 0.5em 0 0.6rem 0.25rem;
   width: 12rem;
-  border: 3px solid var(--headline);
+  border: 3px solid var(--purp1);
   outline: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,21 +621,24 @@ table.responsive-table {
   margin: 0.5rem 0 0 0;
   height: 500px;
   width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
   display: table;
   border: 1px solid var(--bg-secondary);
   border-spacing: 0;
 }
 
+table.responsive-table thead {
+  height: auto;
+}
+
 table.responsive-table thead th {
-  height: 3rem;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
+  height: 60px;
   cursor: context-menu;
   background-color: var(--bg-secondary);
   border: 2px solid var(--bg-secondary);
 }
 
-table.responsive-table tbody .timing,
 table.responsive-table tbody .subjects {
   margin: 0;
   height: 3rem;
@@ -644,28 +647,25 @@ table.responsive-table tbody .subjects {
   background-color: var(--bg-ternary);
 }
 
-table.responsive-table tbody .timing:nth-child(even),
 table.responsive-table tbody .subjects:nth-child(even) {
   background-color: var(--bg-secondary);
 }
 
-table.responsive-table tbody .timing td,
 table.responsive-table tbody .subjects td {
   text-align: center;
-  -webkit-transition: 0.25s ease;
-  transition: 0.25s ease;
+  -webkit-transition: background 0.25s ease;
+  transition: background 0.25s ease;
   border: 1px solid transparent;
 }
 
-table.responsive-table tbody .timing td:hover,
 table.responsive-table tbody .subjects td:hover {
   background-color: var(--bg-primary);
-  border: 1px solid var(--headline);
+  border: 1px solid var(--purp1);
 }
 
 @media only screen and (max-width: 992px) {
   .timetable-container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -677,16 +677,72 @@ table.responsive-table tbody .subjects td:hover {
         -ms-flex-pack: center;
             justify-content: center;
     position: relative;
+    margin-bottom: 1rem;
   }
   table.responsive-table {
     height: 500px;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: relative;
     overflow: auto;
-    background-color: var(--purp1);
+  }
+  table.responsive-table th,
+  table.responsive-table td {
+    margin: 0;
+    vertical-align: top;
+  }
+  table.responsive-table thead {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    float: left;
+    border: 2px solid var(--paragraph);
+  }
+  table.responsive-table thead tr {
+    display: inline-block;
+  }
+  table.responsive-table thead th {
+    display: block;
+    line-height: 60px;
+  }
+  table.responsive-table tbody {
+    display: block;
+    height: 360px;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  table.responsive-table tbody .subjects {
+    display: inline-block;
+    height: 100%;
+  }
+  table.responsive-table td {
+    display: block;
+    height: 60px;
+    text-align: center;
+    padding: 0 5px 0 5px;
+    line-height: 60px;
   }
 }
 /*# sourceMappingURL=style.css.map */

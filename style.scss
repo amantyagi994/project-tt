@@ -1,9 +1,8 @@
 :root {
   --bg-primary: #ffffff;
-  --bg-secondary: #cacaca;
-  --bg-ternary: #ebebeba6;
-  --headline: #4e0c88;
-  --paragraph: #a7a9be;
+  --bg-secondary: #eeeeee;
+  --bg-ternary: #dddddd;
+  --paragraph: #aaaaaa;
   --purp1: #7912ce;
   --btn-txt: #fffffe;
   --button: #7746ea;
@@ -14,6 +13,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 html,
@@ -33,7 +33,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid var(--headline);
+  border-bottom: 2px solid var(--purp1);
 
   .logo-container {
     height: 200px;
@@ -130,7 +130,7 @@ body {
 .table-container {
   height: 100%;
   display: flex;
-  border-bottom: 2px solid var(--headline);
+  border-bottom: 2px solid var(--purp1);
 }
 
 .time-table-header {
@@ -147,7 +147,7 @@ body {
     margin: 0.5rem 0 0.25rem 0;
     padding: 0.5em 0 0.6rem 0.25rem;
     width: 12rem;
-    border: 3px solid var(--headline);
+    border: 3px solid var(--purp1);
     outline: none;
     display: flex;
   }
@@ -476,13 +476,15 @@ table.responsive-table {
   margin: 0.5rem 0 0 0;
   height: 500px;
   width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
   display: table;
   border: 1px solid var(--bg-secondary);
   border-spacing: 0;
   thead {
+    height: auto;
     th {
-      height: 3rem;
-      transition: 0.25s ease;
+      height: 60px;
       cursor: context-menu;
       background-color: var(--bg-secondary);
       border: 2px solid var(--bg-secondary);
@@ -490,7 +492,6 @@ table.responsive-table {
   }
 
   tbody {
-    .timing,
     .subjects {
       margin: 0;
       height: 3rem;
@@ -502,11 +503,11 @@ table.responsive-table {
       }
       td {
         text-align: center;
-        transition: 0.25s ease;
+        transition: background 0.25s ease;
         border: 1px solid transparent;
         &:hover {
           background-color: var(--bg-primary);
-          border: 1px solid var(--headline);
+          border: 1px solid var(--purp1);
         }
       }
     }
@@ -515,24 +516,70 @@ table.responsive-table {
 
 @media only screen and (max-width: 992px) {
   .timetable-container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-bottom: 1rem;
   }
-  
+
   table.responsive-table {
     height: 500px;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: auto;
-    background-color: var(--purp1);
+
+    th,
+    td {
+      margin: 0;
+      vertical-align: top;
+    }
+
+    thead {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      float: left;
+      border: 2px solid var(--paragraph);
+
+      tr {
+        display: inline-block;
+      }
+
+      th {
+        display: block;
+        line-height: 60px;
+      }
+    }
+
+    tbody {
+      display: block;
+      height: 360px;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      white-space: nowrap;
+      // border: 2px solid var(--paragraph);
+
+      .subjects {
+        display: inline-block;
+        height: 100%;
+      }
+    }
+    td {
+      display: block;
+      height: 60px;
+      text-align: center;
+      padding: 0 5px 0 5px;
+      line-height: 60px;
+    }
   }
-
-
 }
