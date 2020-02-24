@@ -24,6 +24,16 @@ body {
   // overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--purp1);
+}
+
 .welcome {
   height: 100vh;
   width: 100%;
@@ -134,14 +144,14 @@ body {
 }
 
 .time-table-header {
-  height: 170px;
+  height: 100%;
   width: 400px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
+  padding-top: 60px;
   background-color: var(--bg-primary);
   .input-bar {
     margin: 0.5rem 0 0.25rem 0;
@@ -511,10 +521,14 @@ table.responsive-table {
         }
       }
     }
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
   }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1080px) {
   .timetable-container {
     height: 100%;
     width: 100%;
@@ -538,7 +552,7 @@ table.responsive-table {
 
     th,
     td {
-      margin: 0;
+      padding: 0;
       vertical-align: top;
     }
 
