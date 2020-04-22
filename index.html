@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
+      rel="shortcut icon"
+      href="/pexels-photo-745708.jpeg"
+      type="image/x-icon"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
@@ -25,8 +30,8 @@
         <a href="#time-table-container" class="view"><span>View</span></a>
       </div>
     </section>
-    <div class="table-container" id="time-table-container">
-      <section class="time-table-header">
+    <section class="table-container" id="time-table-container">
+      <div class="time-table-header">
         <label for="search" class="search-container">
           <input
             type="text"
@@ -77,156 +82,77 @@
             </ul>
           </div>
         </div>
-      </section>
-
-      <section class="timetable-container">
-        <table class="responsive-table">
-          <thead>
-            <tr>
-              <th id="funday">FUNDAY</th>
-              <th id="monday">MONDAY</th>
-              <th id="tuesday">TUESDAY</th>
-              <th id="wednesday">WEDNESDAY</th>
-              <th id="thursday">THURSDAY</th>
-              <th id="friday">FRIDAY</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="subjects">
-              <td id="l1">09:30 - 10:20</td>
-              <td id="l1d1">Subject Name 1</td>
-              <td id="l1d2">Subject Name 2</td>
-              <td id="l1d3">Subject Name 3</td>
-              <td id="l1d4">Subject Name 4</td>
-              <td id="l1d5">Subject Name 5</td>
-            </tr>
-
-            <tr class="subjects">
-              <td id="l2">10:20 - 11:10</td>
-              <td id="l2d1">Subject Name</td>
-              <td id="l2d2">Subject Name</td>
-              <td id="l2d3">Subject Name</td>
-              <td id="l2d4">Subject Name</td>
-              <td id="l2d5">Subject Name</td>
-            </tr>
-            <tr class="subjects">
-              <td id="l3">11:10 - 12:00</td>
-              <td id="l3d1">Subject Name</td>
-              <td id="l3d2">Subject Name</td>
-              <td id="l3d3">Subject Name</td>
-              <td id="l3d4">Subject Name</td>
-              <td id="l3d5">Subject Name</td>
-            </tr>
-            <tr class="subjects">
-              <td id="l4">12:00 - 12:50</td>
-              <td id="l4d1">Subject Name</td>
-              <td id="l4d2">Subject Name</td>
-              <td id="l4d3">Subject Name</td>
-              <td id="l4d4">Subject Name</td>
-              <td id="l4d5">Subject Name</td>
-            </tr>
-            <tr class="subjects">
-              <td id="l5">12:50 - 01:40</td>
-              <td id="l5d1">Subject Name</td>
-              <td id="l5d2">Subject Name</td>
-              <td id="l5d3">Subject Name</td>
-              <td id="l5d4">Subject Name</td>
-              <td id="l5d5">Subject Name</td>
-            </tr>
-            <tr class="subjects">
-              <td id="l6">01:40 - 02:30</td>
-              <td id="l6d1">Subject Name</td>
-              <td id="l6d2">Subject Name</td>
-              <td id="l6d3">Subject Name</td>
-              <td id="l6d4">Subject Name</td>
-              <td id="l6d5">Subject Name</td>
-            </tr>
-            <tr class="subjects">
-              <td id="l7">02:30 - 03:20</td>
-              <td id="l7d1">Subject Name</td>
-              <td id="l7d2">Subject Name</td>
-              <td id="l7d3">Subject Name</td>
-              <td id="l7d4">Subject Name</td>
-              <td id="l7d5">Subject Name</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
-
-    <!-- <div>
-      <div id="form-container" class="main-container">
-        <h2>Wanna contact me:</h2>
-        <div class="form">
-          the text-input class will be used as parent for input styling
-          <div class="input-container">
-            <input
-              id="first-name"
-              type="text"
-              placeholder="Firstname"
-              autocomplete="off"
-              required
-            />
-            <label for="first-name"> First Name</label>
+      </div>
+      <!-- table -->
+      <div id="app">
+        <div class="table">
+          <div class="row">
+            <div class="col"><sub>TIME</sub> \ <sup>DAY</sup></div>
+            <div class="col">09:30 - 10:20</div>
+            <div class="col">10:20 - 11:10</div>
+            <div class="col">11:10 - 12:00</div>
+            <div class="col">12:00 - 12:50</div>
+            <div class="col">12:50 - 01:40</div>
+            <div class="col">01:40 - 02:30</div>
+            <div class="col">02:30 - 03:20</div>
           </div>
-          <div class="input-container">
-            <input
-              id="last-name"
-              type="text"
-              placeholder="Lastname"
-              autocomplete="off"
-              required
-            />
-            <label for="last-name">Last Name</label>
+          <div class="sub">
+            <div class="sub-wrapper">
+              <div class="row">
+                <div class="col">MONDAY</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+              </div>
+              <div class="row">
+                <div class="col">TUESDAY</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+              </div>
+              <div class="row">
+                <div class="col">WEDNESDAY</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+              </div>
+              <div class="row">
+                <div class="col">THURSDAY</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+              </div>
+              <div class="row">
+                <div class="col">FRIDAY</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+                <div class="col">subject</div>
+              </div>
+            </div>
           </div>
-          <div class="input-container">
-            <input
-              id="username"
-              type="text"
-              placeholder="Username"
-              autocomplete="off"
-              required
-            />
-            <label for="username">Username</label>
-          </div>
-
-          <div class="input-container">
-            <input
-              id="email"
-              type="email"
-              placeholder="E-mail"
-              autocomplete="off"
-              required
-            />
-            <label for="email">E-mail</label>
-          </div>
-          <div class="input-container">
-            <input
-              id="mobile"
-              type="tel"
-              placeholder="Mobile"
-              autocomplete="off"
-              required
-            />
-            <label for="mobile">Mobile No.</label>
-          </div>
-          <div class="input-container">
-            <input
-              id="text-area"
-              type="text-area"
-              placeholder="your message here"
-              autocomplete="off"
-              required
-            />
-            <label for="text-area">Your message here</label>
-          </div>
-          <button type="submit" class="btn-submit">Submit</button>
         </div>
       </div>
-    </div> -->
-
-    <!-- Compiled and minified JavaScript -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></!-->
+    </section>
 
     <script src="script.js"></script>
   </body>
