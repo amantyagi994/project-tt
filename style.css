@@ -33,7 +33,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	background-color: var(--purp1);
+	background-color: var(--accent);
 }
 
 .welcome {
@@ -54,7 +54,7 @@ body {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	border-bottom: 2px solid var(--purp1);
+	border-bottom: 2px solid var(--accent);
 }
 
 .logo-container {
@@ -66,7 +66,7 @@ body {
 	height: inherit;
 	width: inherit;
 	padding: 0.25rem;
-	border: 5px solid var(--purp1);
+	border: 5px solid var(--accent);
 	border-radius: 50%;
 	overflow: hidden;
 	background-color: transparent;
@@ -118,7 +118,7 @@ body {
 }
 
 .view:hover {
-	border: 2px solid var(--purp1);
+	border: 2px solid var(--accent);
 }
 
 .view span {
@@ -163,7 +163,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-bottom: 2px solid var(--purp1);
+	border-bottom: 2px solid var(--accent);
 }
 
 .time-table-header {
@@ -191,7 +191,7 @@ body {
 	margin: 0.5rem 0 0.25rem 0;
 	padding: 0.5em 0 0.6rem 0.25rem;
 	width: 12rem;
-	border: 3px solid var(--purp1);
+	border: 3px solid var(--accent);
 	outline: none;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -235,7 +235,7 @@ body {
 	display: block;
 	color: var(--btn-txt);
 	padding: 10px 25px;
-	background-color: var(--purp1);
+	background-color: var(--accent);
 	cursor: pointer;
 	-webkit-transition: 0.4s ease;
 	transition: 0.4s ease;
@@ -302,7 +302,7 @@ body {
 	pointer-events: none;
 	-webkit-transition: 0.4s ease;
 	transition: 0.4s ease;
-	background-color: var(--purp1);
+	background-color: var(--accent);
 }
 
 .time-table-header .class-container .c-nav li ul .std {
@@ -368,7 +368,7 @@ body {
 	display: block;
 	color: var(--btn-txt);
 	padding: 10px 25px;
-	background-color: var(--purp1);
+	background-color: var(--accent);
 	cursor: pointer;
 	-webkit-transition: 0.4s ease;
 	transition: 0.4s ease;
@@ -435,7 +435,7 @@ body {
 	pointer-events: none;
 	-webkit-transition: 0.4s ease;
 	transition: 0.4s ease;
-	background-color: var(--purp1);
+	background-color: var(--accent);
 }
 
 .time-table-header .semester-container .sem-container li ul .semester {
@@ -684,38 +684,4 @@ body {
 .table > .row:first-child > .col {
 	cursor: default;
 	font-weight: 700;
-}
-
-.navWrapper {
-	width: 100%;
-	height: 60px;
-	background-color: #ad21e3;
-	margin: 0;
-	padding: 0;
-}
-
-.logoWrapper {
-	height: 50px;
-	width: 125px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-}
-
-.logoWrapper img {
-	height: 100%;
-	border-radius: 50%;
-}
-
-.logoWrapper p {
-	font-size: 20px;
-	font-weight: 900;
-	text-transform: uppercase;
-}
-/*# sourceMappingURL=style.css.map */
+} 
