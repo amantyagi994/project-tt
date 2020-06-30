@@ -154,6 +154,29 @@
       </div>
     </section>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBXFrIQFcuel2iNvmQF5zz97t0woOLb-tc",
+        authDomain: "time-table-manager.firebaseapp.com",
+        databaseURL: "https://time-table-manager.firebaseio.com",
+        projectId: "time-table-manager",
+        storageBucket: "time-table-manager.appspot.com",
+        messagingSenderId: "690607125609",
+        appId: "1:690607125609:web:43968da8594939e0e81ef8",
+        measurementId: "G-DYC333R4FM",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
